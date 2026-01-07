@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Elements Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #4b6cb7;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .main-content {
+            flex: 3;
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #4b6cb7;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        
+        .image-caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #4b6cb7;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            background-color: #3a5795;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .external-link {
+            background-color: #3498db;
+        }
+        
+        .external-link:hover {
+            background-color: #2980b9;
+        }
+        
+        .resource-link {
+            background-color: #2ecc71;
+        }
+        
+        .resource-link:hover {
+            background-color: #27ae60;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .tag-demo {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-code"></i> Basic HTML Elements Demonstration</h1>
+        <p>A practical example of using HTML tags to structure a web page</p>
+    </header>
+    
+    <div class="container">
+        <main class="main-content">
+            <h2>HTML: The Foundation of the Web</h2>
+            
+            <p class="intro">HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser. It defines the structure and content of a web page.</p>
+            
+            <h3>HTML Headings</h3>
+            <p>Headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags. <code>&lt;h1&gt;</code> is the most important heading and <code>&lt;h6&gt;</code> is the least important.</p>
+            
+            <div class="tag-demo">
+                &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+                &lt;h2&gt;Secondary Heading&lt;/h2&gt;<br>
+                &lt;h3&gt;Tertiary Heading&lt;/h3&gt;
+            </div>
+            
+            <h3>HTML Paragraphs</h3>
+            <p>The <code>&lt;p&gt;</code> tag defines a paragraph. Browsers automatically add a single blank line before and after each <code>&lt;p&gt;</code> element.</p>
+            
+            <p>This is a second paragraph demonstrating how text flows on a webpage. Paragraphs are block-level elements that help organize content into readable sections.</p>
+            
+            <h3>HTML Lists</h3>
+            <p>HTML supports two main types of lists:</p>
+            
+            <h4>Unordered List (Bulleted)</h4>
+            <ul>
+                <li>First list item</li>
+                <li>Second list item</li>
+                <li>Third list item with a <a href="#" class="resource-link">link example</a></li>
+                <li>Fourth list item</li>
+            </ul>
+            
+            <h4>Ordered List (Numbered)</h4>
+            <ol>
+                <li>First step in a process</li>
+                <li>Second step in a process</li>
+                <li>Third step in a process</li>
+                <li>Fourth step in a process</li>
+            </ol>
+            
+            <h3>HTML Images</h3>
+            <p>The <code>&lt;img&gt;</code> tag is used to embed images in a web page. It requires a <code>src</code> attribute to specify the image path and an <code>alt</code> attribute for accessibility.</p>
+            
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="HTML code on a computer screen">
+                <p class="image-caption">Example of HTML code displayed on a computer screen (Source: Unsplash)</p>
+            </div>
+        </main>
+        
+        <aside class="sidebar">
+            <h2>HTML Elements Quick Reference</h2>
+            
+            <h3>Common HTML Tags</h3>
+            <ul>
+                <li><code>&lt;h1&gt;-&lt;h6&gt;</code>: Headings</li>
+                <li><code>&lt;p&gt;</code>: Paragraph</li>
+                <li><code>&lt;ul&gt;</code>: Unordered List</li>
+                <li><code>&lt;ol&gt;</code>: Ordered List</li>
+                <li><code>&lt;li&gt;</code>: List Item</li>
+                <li><code>&lt;img&gt;</code>: Image</li>
+                <li><code>&lt;a&gt;</code>: Anchor (Link)</li>
+                <li><code>&lt;div&gt;</code>: Division/Container</li>
+            </ul>
+            
+            <h3>Try It Yourself</h3>
+            <p>Practice HTML with these online resources:</p>
+            
+            <div class="links-container">
+                <a href="https://www.w3schools.com/html/" target="_blank" class="external-link"><i class="fas fa-external-link-alt"></i> W3Schools HTML Tutorial</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="external-link"><i class="fas fa-external-link-alt"></i> MDN HTML Guide</a>
+                <a href="https://codepen.io/pen/" target="_blank" class="resource-link"><i class="fab fa-codepen"></i> CodePen Editor</a>
+                <a href="#top" class="resource-link"><i class="fas fa-arrow-up"></i> Back to Top</a>
+            </div>
+            
+            <h3>HTML Image Example Code</h3>
+            <div class="tag-demo">
+                &lt;img src="image.jpg" alt="Description of image" width="500" height="300"&gt;
+            </div>
+            
+            <h3>HTML Link Example Code</h3>
+            <div class="tag-demo">
+                &lt;a href="https://www.example.com" target="_blank"&gt;Visit Example.com&lt;/a&gt;
+            </div>
+        </aside>
+    </div>
+    
+    <footer>
+        <p>Basic HTML Web Page Demo | Created with HTML5 & CSS3</p>
+        <p>This page demonstrates the use of headings, paragraphs, lists, images, and links.</p>
+        <p>All elements are properly structured using semantic HTML tags.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Demo | Internal & External</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Navigation styling */
+        nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #f0f7ff;
+            color: #2575fc;
+        }
+        
+        /* Section styling */
+        section {
+            padding: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        /* CSS type cards */
+        .css-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .css-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .css-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .css-card-header {
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        
+        .css-card-content {
+            padding: 1.5rem;
+        }
+        
+        /* CSS Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.2rem;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #3498db;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .css-types {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>CSS Styling Demonstration</h1>
+            <p class="subtitle">A practical example of Internal and External CSS in action</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#internal">Internal CSS</a></li>
+                <li><a href="#external">External CSS</a></li>
+                <li><a href="#comparison">Comparison</a></li>
+                <li><a href="#try-it">Try It</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <section id="home">
+            <h2 class="section-title">CSS Styling Methods</h2>
+            <p>This webpage demonstrates the use of both <strong>internal CSS</strong> (styles defined within the &lt;style&gt; tag in the HTML document) and <strong>external CSS</strong> (styles loaded from an external .css file).</p>
+            <p>Internal CSS is used for page-specific styles that are unique to this page, while external CSS contains reusable styles that could be applied across multiple pages.</p>
+            
+            <div class="css-types">
+                <div class="css-card" id="internal-card">
+                    <div class="css-card-header" style="background: linear-gradient(to right, #ff416c, #ff4b2b);">
+                        Internal CSS
+                    </div>
+                    <div class="css-card-content">
+                        <p>Internal CSS is defined within the &lt;style&gt; element inside the &lt;head&gt; section of an HTML document.</p>
+                        <ul>
+                            <li>Applies only to the current page</li>
+                            <li>Useful for page-specific styles</li>
+                            <li>Can override external CSS</li>
+                            <li>Increases page load time slightly</li>
+                        </ul>
+                        <p class="example-text">This card is styled with internal CSS.</p>
+                    </div>
+                </div>
+                
+                <div class="css-card" id="external-card">
+                    <div class="css-card-header" style="background: linear-gradient(to right, #2193b0, #6dd5ed);">
+                        External CSS
+                    </div>
+                    <div class="css-card-content">
+                        <p>External CSS is defined in a separate .css file and linked to the HTML document using the &lt;link&gt; tag.</p>
+                        <ul>
+                            <li>Can be reused across multiple pages</li>
+                            <li>Easier to maintain and update</li>
+                            <li>Better for website performance</li>
+                            <li>Promotes consistency across a site</li>
+                        </ul>
+                        <p class="example-text">This card uses styles from the external CSS file.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="comparison">
+            <h2 class="section-title">Internal vs External CSS Comparison</h2>
+            <p>Below is a comparison of the characteristics of internal and external CSS:</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Internal CSS</th>
+                        <th>External CSS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definition Location</strong></td>
+                        <td>Inside the HTML file, within &lt;style&gt; tags</td>
+                        <td>In a separate .css file</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scope</strong></td>
+                        <td>Applies only to the current page</td>
+                        <td>Can apply to multiple pages</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maintenance</strong></td>
+                        <td>Harder to maintain across multiple pages</td>
+                        <td>Easier to maintain and update</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Page Load Speed</strong></td>
+                        <td>Slightly increases HTML file size</td>
+                        <td>Can be cached by browsers for faster loading</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Use Case</strong></td>
+                        <td>Page-specific styling</td>
+                        <td>Site-wide consistent styling</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Try It Section -->
+        <section id="try-it">
+            <h2 class="section-title">Try It Yourself</h2>
+            <p>Use the controls below to see how internal and external CSS interact. The button styles are defined in the external CSS, but we can override them with internal CSS.</p>
+            
+            <div class="demo-controls">
+                <div class="control-group">
+                    <h3>External CSS Button</h3>
+                    <button class="btn external-btn">Styled by External CSS</button>
+                    <p>This button uses only external CSS styling.</p>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Internal CSS Override</h3>
+                    <button class="btn internal-override">Styled by Internal CSS</button>
+                    <p>This button uses external CSS but is overridden by internal CSS.</p>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Inline Style Button</h3>
+                    <button class="btn" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: white; border: none; padding: 12px 24px; font-weight: bold;">Styled with Inline CSS</button>
+                    <p>This button uses inline CSS (highest priority).</p>
+                </div>
+            </div>
+            
+            <div class="css-priority">
+                <h3>CSS Priority Order (Highest to Lowest)</h3>
+                <ol>
+                    <li>Inline Styles (style attribute)</li>
+                    <li>Internal CSS (&lt;style&gt; tag)</li>
+                    <li>External CSS (external .css file)</li>
+                    <li>Browser Default Styles</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>Webpage designed to demonstrate Internal and External CSS styling techniques</p>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#internal">Internal CSS</a>
+                <a href="#external">External CSS</a>
+                <a href="#comparison">Comparison</a>
+            </div>
+            <p>© 2023 CSS Styling Demo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactivity for the demo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click effects to buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                    
+                    // Show which CSS styled the button
+                    let buttonType = "button";
+                    if (this.classList.contains('external-btn')) {
+                        buttonType = "External CSS";
+                    } else if (this.classList.contains('internal-override')) {
+                        buttonType = "Internal CSS";
+                    } else {
+                        buttonType = "Inline CSS";
+                    }
+                    
+                    alert(`You clicked the ${buttonType} styled button!`);
+                });
+            });
+            
+            // Highlight active nav link on scroll
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

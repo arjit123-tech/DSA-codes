@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Survey Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .survey-container {
+            background: #fff;
+            padding: 20px;
+            margin: auto;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="survey-container">
+        <h2>Online Survey Form</h2>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter your age" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Gender</label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+            </select>
+
+            <label>How satisfied are you with our service?</label>
+            <input type="radio" name="satisfaction" value="Very Satisfied"> Very Satisfied<br>
+            <input type="radio" name="satisfaction" value="Satisfied"> Satisfied<br>
+            <input type="radio" name="satisfaction" value="Neutral"> Neutral<br>
+            <input type="radio" name="satisfaction" value="Dissatisfied"> Dissatisfied<br>
+            <input type="radio" name="satisfaction" value="Very Dissatisfied"> Very Dissatisfied<br><br>
+
+            <label for="feedback">Any suggestions?</label>
+            <textarea id="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
